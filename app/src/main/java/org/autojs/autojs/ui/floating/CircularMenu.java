@@ -138,6 +138,7 @@ public class CircularMenu implements Recorder.OnStateChangedListener, LayoutInsp
         ExplorerView explorerView = new ExplorerView(mContext);
         explorerView.setExplorer(Explorers.workspace(), ExplorerDirPage.createRoot(Pref.getScriptDirPath()));
         explorerView.setDirectorySpanSize(2);
+        explorerView.setFilter(item -> (item.getName().endsWith(".js")));
         final MaterialDialog dialog = new ThemeColorMaterialDialogBuilder(mContext)
                 .title(R.string.text_run_script)
                 .customView(explorerView, false)
