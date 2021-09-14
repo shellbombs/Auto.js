@@ -98,7 +98,7 @@ public class MainActivity extends BaseActivity implements OnActivityResultDelega
         checkPermissions();
         showAccessibilitySettingPromptIfDisabled();
         mVersionGuard = new VersionGuard(this);
-        showAnnunciationIfNeeded();
+        //showAnnunciationIfNeeded();
         EventBus.getDefault().register(this);
         applyDayNightMode();
     }
@@ -258,7 +258,7 @@ public class MainActivity extends BaseActivity implements OnActivityResultDelega
     protected void onStart() {
         super.onStart();
         if (!BuildConfig.DEBUG) {
-            DeveloperUtils.verifyApk(this, R.string.dex_crcs);
+            //DeveloperUtils.verifyApk(this, R.string.dex_crcs);
         }
     }
 
